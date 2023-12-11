@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-www
+  labels:
+    app: nginx-www
+spec:
+  selector:
+    matchLabels:
+      app: nginx-www
+  template:
+    metadata:
+      labels:
+        app: nginx-www
+    spec:
+      containers:
+        - name: nginx-www
+          image: nginx:latest
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 80

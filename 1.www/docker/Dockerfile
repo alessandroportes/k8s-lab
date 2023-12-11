@@ -1,4 +1,4 @@
-FROM cgr.dev/chainguard/nginx:latest
+FROM cgr.dev/chainguard/nginx:latest-dev
 
 COPY html/ /usr/share/nginx/html/
 COPY nginx-conf/default.conf /etc/nginx/conf.d/default.conf
