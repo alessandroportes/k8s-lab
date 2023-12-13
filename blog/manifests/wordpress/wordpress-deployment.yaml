@@ -18,7 +18,7 @@ spec:
           image: wordpress:latest
           env:
             - name: WORDPRESS_DB_HOST
-              value: mysql
+              value: wordpress-mysql-service 
             - name: WORDPRESS_DB_PASSWORD
               valueFrom:
                 secretKeyRef:
